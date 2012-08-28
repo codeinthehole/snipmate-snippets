@@ -106,3 +106,29 @@ snippet r2r
 			${2}
 		}${3:, context_instance=RequestContext(request)}
 	)
+
+# Testcase
+snippet tc
+	from django.test import TestCase
+
+
+	class Test${1:Something}(TestCase):
+	    
+		def setUp(self):
+		    ${2:pass}
+
+		def test_${3:situation}(self):
+			${4:pass}
+
+# Functional testcase
+snippet ftc
+	from django_webtest import WebTest
+
+
+	class Test${1:Something}(WebTest):
+	    
+		def setUp(self):
+		    ${2:pass}
+
+		def test_${3:situation}(self):
+			${4:pass}
