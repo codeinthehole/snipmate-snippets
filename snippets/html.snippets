@@ -733,8 +733,18 @@ snippet summary
 snippet sup
 	<sup>${1}</sup>
 snippet table
-	<table border="${1:0}">
-		${2}
+	<table id="${1}" class="${2:table}">
+		<caption>${3}</caption>
+		<thead>
+			<tr>
+				${4}
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				${5}
+			</tr>
+		</tbody>
 	</table>
 snippet table.
 	<table class="${1}" border="${2:0}">
